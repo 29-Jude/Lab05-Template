@@ -10,11 +10,13 @@ public class RestartController : MonoBehaviour
     private void Start()
     {
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void Update()
     {
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void Restart()

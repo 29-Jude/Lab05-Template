@@ -1173,7 +1173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d8798750cb3f145933e54c6a38b356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoinsToWin: 6
+  CoinsToWin: 0
   CoinsCollected: 0
 --- !u!1 &513957027
 GameObject:

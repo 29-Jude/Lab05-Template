@@ -17,7 +17,7 @@ public class ColliderController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(CoinsCollected == CoinsToWin)
+        if(CoinsCollected >= CoinsToWin)
         {
             SceneManager.LoadScene("GameWin");
         }
@@ -29,6 +29,11 @@ public class ColliderController : MonoBehaviour
         {
             Destroy(other.gameObject);
             CoinsCollected += 1;
+        }
+
+        else if(other.gameObject.tag == "Fire")
+        {
+            SceneManager.LoadScene("GameLose");
         }
     }
 }
