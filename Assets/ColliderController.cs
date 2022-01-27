@@ -23,16 +23,12 @@ public class ColliderController : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if(gameObject.tag == "Coin")
+        if(other.gameObject.tag == "Coin")
         {
             Destroy(other.gameObject);
-        }
-
-        else if (gameObject.tag == "Fire")
-        {
-            SceneManager.LoadScene("GameOver");
+            CoinsCollected += 1;
         }
     }
 }
