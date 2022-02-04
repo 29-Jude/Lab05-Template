@@ -7,11 +7,12 @@ public class ColliderController : MonoBehaviour
 {
     public float CoinsToWin;
     public float CoinsCollected;
+    public Transform Particle;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Particle.GetComponent<ParticleSystem>().Stop();
     }
 
     // Update is called once per frame
@@ -29,6 +30,8 @@ public class ColliderController : MonoBehaviour
         {
             Destroy(other.gameObject);
             CoinsCollected += 1;
+            Particle.GetComponent<ParticleSystem>().Play();
+            
         }
 
         else if(other.gameObject.tag == "Fire")
